@@ -1,5 +1,8 @@
 # https://binarysearch.com/problems/Task-Hare
 
+# greedy approach - sort tasks and people in reverse order, and greedily assign
+# tasks to people
+
 class Solution:
     def solve(self, tasks, people):
         tasks.sort(reverse=True)
@@ -14,5 +17,3 @@ class Solution:
                 p += 1
                 doable += 1
         return doable
-
-print(Solution().solve([3, 2, 9, 13], [10, 5, 2, 1]))
